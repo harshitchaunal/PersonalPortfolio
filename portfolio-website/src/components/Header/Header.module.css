@@ -11,6 +11,18 @@
     border-radius: 100px;
     justify-content: center;
     margin-left: 24%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* For smaller screens, center and make the header fill more width */
+@media (max-width: 768px) {
+    .header {
+        width: 82%;
+        margin-left: 5%;
+        top: 1%;
+        padding: 0.8rem;
+        border-radius: 50px;
+    }
 }
 
 .navbar {
@@ -22,17 +34,20 @@
     font-family: Raleway, sans-serif;
 }
 
+/* Adjust navigation links for mobile */
 .navLinks {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
+    flex-wrap: wrap;
+    /* Ensure links wrap if necessary */
+    justify-content: center;
 }
 
 .navLinks li {
     font-size: 1rem;
     font-weight: normal;
-    /* Ensure all links have normal font-weight */
 }
 
 .navLinks li a {
@@ -40,46 +55,61 @@
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: normal;
-    /* Normal font weight for all links */
 }
 
 .navLinks li a:hover {
     text-decoration: underline;
     color: white;
-    /* Hover effect for links */
 }
 
 /* Active link style */
 .navLinks li a.active {
     color: white;
     font-weight: normal;
-    /* Keep active links normal, not bold */
 }
 
-/* Inactive style for 'harshit chaunal' */
 .navLinks li a.inactiveMainLink {
     color: #8a4cff;
     font-weight: normal;
-    /* Ensure 'harshit chaunal' inactive link is not bold */
 }
 
 /* Icons */
 .navIcons {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
-    margin-left: -10%;
+    justify-content: center;
+    margin-left: 0;
 }
 
+/* Reduce icon size for smaller screens */
 .navIcons li a {
     color: #8a4cff;
-    /* Purple color for icons */
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .navIcons li a:hover {
     color: white;
-    /* Hover effect for icons */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 1rem;
+    }
+
+    .navLinks {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-left: -50px;
+    }
+
+    .navIcons {
+        gap: 0.8rem;
+        margin-left: -50px;
+    }
 }

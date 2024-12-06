@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 50%;
+    top: 2%;
+    z-index: 1000;
+    border-radius: 100px;
+    justify-content: center;
+    margin-left: 24%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Raleway, sans-serif;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navLinks li {
+    font-size: 1rem;
+    font-weight: normal;
+    /* Ensure all links have normal font-weight */
+}
+
+.navLinks li a {
+    color: #8a4cff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: normal;
+    /* Normal font weight for all links */
+}
+
+.navLinks li a:hover {
+    text-decoration: underline;
+    color: white;
+    /* Hover effect for links */
+}
+
+/* Active link style */
+.navLinks li a.active {
+    color: white;
+    font-weight: normal;
+    /* Keep active links normal, not bold */
+}
+
+/* Inactive style for 'harshit chaunal' */
+.navLinks li a.inactiveMainLink {
+    color: #8a4cff;
+    font-weight: normal;
+    /* Ensure 'harshit chaunal' inactive link is not bold */
+}
+
+/* Icons */
+.navIcons {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: -10%;
+}
+
+.navIcons li a {
+    color: #8a4cff;
+    /* Purple color for icons */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navIcons li a:hover {
+    color: white;
+    /* Hover effect for icons */
+}
